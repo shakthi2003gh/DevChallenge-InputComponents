@@ -1,10 +1,45 @@
+@use "variables" as *;
 @forward "normalize";
+@forward "inputs";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Ubuntu+Mono&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Poppins", sans-serif;
+  font-size: $fs-300;
+  min-height: 100vh;
+  padding: 2rem;
+  color: $clr-gray-700;
+}
+
+h1 {
+  font-size: $fs-700;
+  color: $clr-gray-500;
 }
 
 .heading {
   font-family: "Ubuntu Mono", monospace;
+}
+
+.sub-heading {
+  font-family: "Ubuntu Mono", monospace;
+  color: $clr-gray-300;
+}
+
+.group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  row-gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
